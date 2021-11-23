@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <link rel="manifest" href="public/manifest.json" />
+  <title>React App</title>
+  </script>
+  <script src="../dist/index.bundle.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+<script>
+  async function getCardData() {
+    console.log("getCardData ");
+    return await Promise.resolve($.post("https://ngoaingu24h.vn/get-cardd-by-ids", { ids: [5490733695893504, 5680755036389376, 5117805082968064, 6243704989810688, 4836330106257408, 5962230013100032, 5399280059678720, 6525179966521344, 4695592617902080, 5821492524744704, 6076485974622208, 5513536021200896, 6639435928043520, 4598742346891264, 5724642253733888, 5161692300312576, 6287592207155200, 4880217323601920, 6006117230444544, 5443167277023232, 6156300157190144, 5593350203768832, 6719250110611456, 4573003413192704, 5698903320035328, 5135953366614016, 6261853273456640, 4854478389903360, 5980378296745984, 5417428343324672, 6057711095513088, 5494761142091776, 6620661048934400, 4579967467782144, 5705867374624768, 5142917421203456, 6268817328046080, 4861442444492800, 5987342351335424, 5424392397914112] }))
+  }
+  function callbackEndGame(t) {
+    console.log("gameObjects ", t);
+    let e = t.totalQuestionAnwserCorrect + "/" + t.totalQuestion;
+    console.log("result ", e), alert("result " + e)
+  }
+</script>
+
+
+<!-- <script type="text/javascript">
+  ElearningBilingual.init({
+    elementId: "root",
+    elementContentId: 'elementContentId'
+  });
+</script> -->
+<!-- <script type="text/javascript">
+  ElearningBilingual.init({
+    elementId: "root"
+  });
+</script> -->
+
+</html>
